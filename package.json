@@ -1,11 +1,11 @@
 {
   "name": "portfolio-website",
   "author": "Voary_Nambinina",
-   "description": "A portfolio of webstie for creating a production-ready fullstack Next.js application",
+  "description": "A portfolio of webstie for creating a production-ready fullstack Next.js application",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://github.com/vnambs/portfolio-website.git",
-  "license" : "MIT",
+  "homepage": "https://github.com/vnambs/portfolio-website.git",
+  "license": "MIT",
   "engines": {
     "node": ">=14.0.0",
     "yarn": ">=1.22.0",
@@ -15,7 +15,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.2.4",
@@ -30,5 +32,11 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8"
   }
 }
