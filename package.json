@@ -1,7 +1,16 @@
 {
   "name": "portfolio-website",
+  "author": "Voary_Nambinina",
+   "description": "A portfolio of webstie for creating a production-ready fullstack Next.js application",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://github.com/vnambs/portfolio-website.git",
+  "license" : "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
