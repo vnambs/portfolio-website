@@ -15,12 +15,14 @@
     "webpack": "^5"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.2.4",
@@ -38,6 +40,11 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.22.0",
+    "@babel/preset-typescript": "^7.21.5",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@storybook/addon-essentials": "^7.0.17",
     "@storybook/addon-interactions": "^7.0.17",
     "@storybook/addon-links": "^7.0.17",
@@ -45,7 +52,10 @@
     "@storybook/nextjs": "^7.0.17",
     "@storybook/react": "^7.0.17",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "cross-env": "^7.0.3",
     "eslint-plugin-storybook": "^0.6.12",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
     "storybook": "^7.0.17"
   }
 }
