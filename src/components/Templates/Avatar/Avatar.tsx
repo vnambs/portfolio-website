@@ -131,6 +131,7 @@ export function Avatar({
     a11yProps['aria-busy'] = true;
     a11yProps['aria-label'] = 'Loading avatar ...';
   } else if (src) {
+    // eslint-disable-next-line @next/next/no-img-element
     avatarFigure = <img src={src} alt={username} />;
   } else {
     a11yProps['aria-label'] = username;
