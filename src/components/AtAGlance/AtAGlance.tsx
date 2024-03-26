@@ -19,7 +19,7 @@ const AtAGlance: React.FC<AtAGlanceProps> = ({ Name, CallName }) => {
   return (
     <div className="uppercase font-TuskerGrotesk text-[64px] text-primary">
       <span className="outline-title">Hey, je suis </span>
-      <span>
+      <span className={ataglanceModule['boujee-text']}>
         <Typical
           steps={[
             'Not a Robot',
@@ -31,8 +31,6 @@ const AtAGlance: React.FC<AtAGlanceProps> = ({ Name, CallName }) => {
             1000,
           ]}
           loop={1}
-          wrapper="p"
-          className={ataglanceModule['boujee-text']}
         />
         <br></br>
       </span>
