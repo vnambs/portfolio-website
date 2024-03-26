@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Maelstrom-Bold';
+  src: url('../fonts/Maelstrom-Bold.otf') format('truetype');
+  /* Autres propriétés de police comme font-weight, font-style, etc. */
+}
+@font-face {
+  font-family: 'TuskerGrotesk';
+  src: url('../fonts/TuskerGrotesk-5500Medium.otf') format('Opentype');
+  /* Autres propriétés de police comme font-weight, font-style, etc. */
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +35,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.outline-title {
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px #606887;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.variation {
+  -webkit-font-variation-settings: 'wght' 800, 'wdth' 125;
+  font-variation-settings: 'wght' 800, 'wdth' 125;
 }

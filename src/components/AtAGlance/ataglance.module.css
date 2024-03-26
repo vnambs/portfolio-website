@@ -1,0 +1,25 @@
+.boujee-text {
+  --bg-size: 400%;
+  --color-one: #007cf0;
+  --color-two: #00dfd8;
+  background: linear-gradient(90deg, #000, var(--color-two), var(--color-one)) 0
+    0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  animation: move-bg 8s infinite linear;
+}
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .boujee-text {
+    animation: move-bg 8s linear infinite;
+  }
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+}
