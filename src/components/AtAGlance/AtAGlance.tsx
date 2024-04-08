@@ -15,7 +15,7 @@ interface AtAGlanceProps {
   Name: string;
 }
 
-const AtAGlance: React.FC<AtAGlanceProps> = ({ Name, CallName }) => {
+const AtAGlance: React.FC<AtAGlanceProps> = ({ Name }) => {
   return (
     <div className="w-full uppercase font-TuskerGrotesk text-primary">
       <span className="outline-title absolute text-[64px] leading-tight">
