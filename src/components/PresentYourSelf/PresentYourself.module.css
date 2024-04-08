@@ -12,7 +12,6 @@
   color: transparent;
   background-clip: text;
   animation: move-bg 16s infinite linear, change-text-color 16s infinite;
-  position: relative;
 }
 
 @keyframes move-bg {

@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Typical from 'react-typical';
-import ataglanceModule from './ataglance.module.css';
+import presentyourselfModule from './PresentYourself.module.css';
 
 /**
  * > It will show the brand image of the site with some styles.
  */
 
-interface AtAGlanceProps {
+interface PresentYourselfProps {
   /**
    * The code snippet that needs to be shown.
    */
@@ -15,15 +15,14 @@ interface AtAGlanceProps {
   Name: string;
 }
 
-const AtAGlance: React.FC<AtAGlanceProps> = ({ Name, CallName }) => {
+const PresentYourself: React.FC<PresentYourselfProps> = ({
+  Name,
+  CallName,
+}) => {
   return (
-    <div className="w-full uppercase font-TuskerGrotesk text-primary">
-      <span className="outline-title absolute text-[64px] leading-tight">
-        Hey, <br></br> <p className="h-[65px] overflow-y-clip">je suis</p>
-      </span>
-      <span
-        className={`${ataglanceModule['boujee-text']} text-[34px] absolute mt-36`}
-      >
+    <div className="uppercase font-TuskerGrotesk text-[64px] text-primary">
+      <span className="outline-title">Hey, je suis </span>
+      <span className={presentyourselfModule['boujee-text']}>
         <Typical
           steps={[
             'Not a Robot',
@@ -38,12 +37,16 @@ const AtAGlance: React.FC<AtAGlanceProps> = ({ Name, CallName }) => {
         />
         <br></br>
       </span>
+      <span className="outline-title">Mais vous pouvez m’appeler </span>
+      <span className="variation">
+        <Typical steps={[Name, 500, CallName, 1000]} loop={4} wrapper="p" />
+      </span>
     </div>
   );
 };
 
-AtAGlance.propTypes = {
+PresentYourself.propTypes = {
   Name: PropTypes.string.isRequired,
   CallName: PropTypes.string.isRequired,
 };
-export default AtAGlance;
+export default PresentYourself;
